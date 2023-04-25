@@ -8,6 +8,8 @@ void _print_binary(unsigned int num, int *count);
 void _print_unsigned_decimal(unsigned int num, int *count);
 void _print_octal(unsigned int num, int *count);
 void _print_hexadecimal(unsigned int num, int uppercase, int *count);
+void _print_number(int num, int *count);
+
 
 int _printf(const char *format, ...)
 {
@@ -37,7 +39,7 @@ int _printf(const char *format, ...)
             else if (*format == 'd' || *format == 'i')
             {
                 int num = va_arg(args, int);
-                printf("%d", num);
+                _print_number(num, &count);
                 count++;
             }
             else if (*format == 'b')
@@ -98,6 +100,17 @@ void _print_unsigned_decimal(unsigned int num, int *count)
         _print_unsigned_decimal(num / 10, count);
     }
     _print_char((num % 10) + '0', count);
+}
+
+void _print_number(int num, int *count)
+{
+    if (num < 0)
+    {
+        _print_char('-', count);
+        num = -num;
+    }
+
+    _print_unsigned_decimal(num, count);
 }
 
 void _print_octal(unsigned int num, int *count)

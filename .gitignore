@@ -1,1 +1,10 @@
-"*.c.swp"
+#ignore all vi temporary files
+"*.swp*"
+
+#ignore all emacs temporary and backup files
+*~
+*\#*
+
+#ignore popular executable filenames
+a
+*.out

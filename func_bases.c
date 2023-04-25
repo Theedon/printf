@@ -1,3 +1,5 @@
+#include "main.h"
+
 void _print_octal(unsigned int num, int *count)
 {
     if (num >= 8)

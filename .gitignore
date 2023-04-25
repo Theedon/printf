@@ -6,5 +6,5 @@
 *\#*
 
 #ignore popular executable filenames
-a
-*.out
+#a
+#*.out

@@ -14,5 +14,6 @@ void _print_binary(unsigned int num, int *count);
 void _print_unsigned_decimal(unsigned int num, int *count);
 void _print_octal(unsigned int num, int *count);
 void _print_hexadecimal(unsigned int num, int uppercase, int *count);
+void _print_number(int num, int *count);
 
 #endif /* MAIN_H */
